@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to "Home","/pages/home" %>
+    <%= link_to "Contact", :controller => "pages", :action => "contact", :message=>"Hello" %>
+    <%= link_to "About","/pages/about" %>
+    <%= link_to "Our Company","/pages/our_company" %>
+    <%= yield %>
+  </body>
+</html>
